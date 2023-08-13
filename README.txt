@@ -17,8 +17,10 @@ You can execute the script from the command line using the following syntax:
 
 python script.py <pdf_file_path>
 
-
 Replace `<pdf_file_path>` with the absolute or relative path to the PDF file you want to process.
+
+the result will be registred in a file named output.docx
+
 
 4. Using in another Python script:
 

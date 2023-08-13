@@ -1,4 +1,5 @@
 import pdfplumber
+import docx
 import sys
 
 def extract_text_from_pdf(pdf_path):
@@ -24,4 +25,13 @@ if __name__ == "__main__":
 
     pdf_path = sys.argv[1]
     extracted_text = extract_text_from_pdf(pdf_path)
-    print(extracted_text)
+
+    # Enregistrer le texte dans un fichier Word
+    doc = docx.Document()
+    doc.add_paragraph(extracted_text)
+    output_file = "output.docx"
+    doc.save(output_file)
+
+    print(f"Text extracted and saved to {output_file}")
+
+
